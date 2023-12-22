@@ -1,0 +1,492 @@
+/* Variables SCSS */
+/*------------------------*/
+/*Selector por id*/
+#toogler {
+  background-color: darkslategray;
+}
+
+/*Selector todos los erlementos por etiqueta*/
+body {
+	background: linear-gradient(-45deg, #8ba3d8, #ffffff, #8de3ff, #68768d);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+/* Selector de clases */
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/*Selector de hijo*/
+div > h3, .col-xs > h2 {
+  color: #000535;
+  text-align: center;
+}
+
+/*Selector de pseudo elemento*/
+#nombre::before {
+  content: "* ";
+  font-weight: bold;
+}
+
+/* Dentro de este container se encuentran y seleccionan todos los elementos p*/
+.container p, .col-xs p {
+  color: #181a1a;
+  font-weight: bolder;
+}
+
+/* Aqui se encuentran las 5 propiedas diferentes de CSS */
+.foto {
+  border-radius: 25px;
+  border: 3px solid #100069;
+  padding: 20px;
+  width: auto;
+  height: auto;
+  
+}
+
+/* Aqui se aplica la Herencia */
+h2, h3, h1 {
+  color: #5734d5;
+  text-align: center;
+}
+
+.foto {
+  /* De igual manera se aplica Herencia */
+  margin: 20px;
+  width: 18vw;
+  height: 18vw;
+}
+
+
+p::selection {
+  color: rgb(50, 177, 0);
+  background-color: rgb(27, 124, 117);
+}
+
+.datos {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+/* Anidamiento */
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 3%;
+}
+table th {
+  font-size: 98%;
+  background: #5a7c686c;
+}
+table td, table th {
+  border-style: double;
+}
+
+.langp {
+  font-size: 400%;
+}
+
+.lang .fa, .langs .fas {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: xx-large;
+  color: green;
+}
+
+
+
+.col-xs figure{
+  position: relative;
+  height: 290px;
+  cursor: pointer;
+  width: 350px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+
+}
+
+.col-xs figure img{
+  width: 90%;
+  height: 100%;
+  transition: all 400ms ease-out;
+  will-change: transform;
+}
+
+.col-xs figure .capa{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(140, 115, 130, 0.774);
+  transition: all 400ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+ text-align: center;
+}
+.col-xs figure:hover > .capa {
+  opacity: 1;
+  visibility: visible;
+}
+.col-xs figure:hover > .capa h3{
+  margin-top: 70px;
+  margin-bottom: 15px;
+}
+.col-xs figure:hover > img{
+  transform: scale(1.3);
+}
+.col-xs figure .capa h3{
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 120px;
+  transition: all 400ms ease-out;
+   margin-top: 30px;
+}
+.col-xs figure .capa p{
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 240px;
+  margin: auto;
+}
+
+h1 {
+  /* Herencia */
+  font-weight: bold;
+}
+
+h3 {
+  /* Herencia */
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+h2 {
+  /* Herencia */
+  text-align: center;
+}
+
+.otros {
+  /* Anidamiento */
+  display: inline-flex;
+  margin-top: 3%;
+}
+.otros .aptitudes_otros {
+  font-size: x-large;
+  color: #1a535c;
+}
+
+.trabajo_box {
+  align-content: center;
+  justify-content: center;
+  background: #a0a8a05e;
+  padding: 4px;
+  margin-left: 0;
+  display: flex;
+}
+
+.trabajo_box_sf {
+  align-content: center;
+  justify-content: center;
+  background: unset;
+  padding: 65px;
+  margin-left: 0;
+  display: flex;
+}
+
+#trabajo_intro {
+  padding-left: 15%;
+  padding-right: 10%;
+  color: #1a535c;
+}
+
+.trabajo_info {
+  max-width: 53%;
+  
+  
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba(208, 151, 137, 0.637);
+  border-radius: 20px;
+  margin-right: 10%;
+  padding: 80px;
+  height: 38vw;
+  width: 90vw;
+}
+
+.trabajo_img {
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 30vw;
+  height: 38vw;
+}
+
+.contact {
+  position: fixed;
+  object-position: 50% 50% !important;
+  right: -1px !important;
+  top: 50% !important;
+  font-size: xxx-large;
+  display: grid;
+}
+
+.contact_link {
+  height: 43px;
+  width: 43px;
+  display: flex;
+  align-items: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin-bottom: 2%;
+  }
+
+  .foto {
+    margin: 20px;
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .info {
+    flex-wrap: wrap;
+  }
+
+  .navbar-collapse {
+    display: flex;
+    justify-content: center;
+  }
+
+  .trabajo_box {
+    background: #a0a8a05e;
+    display: block;
+    padding-top: 1rem;
+  }
+
+  .trabajo_box_sf {
+    background: unset;
+    display: block;
+    padding-top: 1rem;
+  }
+
+  .trabajo_info {
+    max-width: 100px;
+    align-content: unset;
+    justify-content: unset;
+    display: unset;
+    flex-wrap: unset;
+    background: unset;
+    border-radius: unset;
+    margin-right: unset;
+    padding: 0;
+  }
+
+  .trabajo_img {
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: unset;
+    width: unset;
+    height: unset;
+    max-width: 90%;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1130px) {
+  .trabajo_box {
+    background: #a0a8a05e;
+    display: block;
+    padding-top: 1rem;
+  }
+
+  .trabajo_box_sf {
+    background: unset;
+    display: block;
+    padding-top: 1rem;
+  }
+
+  .trabajo_info {
+    max-width:120;
+    align-content: unset;
+    justify-content: unset;
+    display: unset;
+    flex-wrap: unset;
+    background: unset;
+    border-radius: unset;
+    margin-right: unset;
+    padding: 0;
+  }
+
+  .trabajo_img {
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 50vw;
+    height: 40vw;
+  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* ? ----- Cuenta Regresiva ----- */
+#cuenta {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 130px;
+}
+
+.simply-section {
+	background: #fff;
+	width: 120px;
+	height: 170px;
+	margin: 0 20px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.simply-amount {
+	display: block;
+	font-size: 50px;
+	font-weight: 500;
+}
+
+.simply-word {
+	font-weight: 300;
+	font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact {
+  position: fixed;
+  object-position: 50% 50% !important;
+  right: -1px !important;
+  top: 50% !important;
+  font-size: xxx-large;
+  display: grid;
+}
+
+.contact_link {
+  height: 43px;
+  width: 43px;
+  display: flex;
+  align-items: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin-bottom: 2%;
+  }
+
+  .foto {
+    margin: 20px;
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .info {
+    flex-wrap: wrap;
+  }
+
+  .navbar-collapse {
+    display: flex;
+    justify-content: center;
+  }
+
+  .trabajo_box {
+    background: #a0a8a05e;
+    display: block;
+    padding-top: 1rem;
+  }
+
+  .trabajo_box_sf {
+    background: unset;
+    display: block;
+    padding-top: 1rem;
+  }
+
+  .trabajo_info {
+    max-width:190px;
+    align-content: unset;
+    justify-content: unset;
+    display: unset;
+    flex-wrap: unset;
+    background: unset;
+    border-radius: unset;
+    margin-right: unset;
+    padding: 0;
+  }
+
+  .cuenta {
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: unset;
+    width: unset;
+    height: unset;
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1130px) {
+  .trabajo_box {
+    background: #a0a8a05e;
+    display: block;
+    padding-top: 1rem;
+  }
+
+  .trabajo_box_sf {
+    background: unset;
+    display: block;
+    padding-top: 1rem;
+  }
+
+  .trabajo_img {
+    max-width:40;
+    align-content: unset;
+    justify-content: unset;
+    display: unset;
+    flex-wrap: unset;
+    background: unset;
+    border-radius: unset;
+    margin-right: unset;
+    padding: 0;
+  }
+
+  .cuenta {
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 50vw;
+    height: 100vw;
+
+
+  }
+}
